@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <title>Cyno Bridge — an EVE Online companion app</title>
+    <meta
+      name="description"
+      content="Cyno Bridge is an unofficial companion app for EVE Online — view skills, skill queue, wallet, clones, assets, location and planetary industry across all your characters in one place."
+    />
+    <style>
+      :root {
+        --bg: #060a10;
+        --surface: #0d1520;
+        --border: #16263a;
+        --fg: #c8d8e8;
+        --muted: #5a7a9a;
+        --cyan: #00c8ff;
+        --core: #eafbff;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: radial-gradient(120% 80% at 50% 0%, #0e1828 0%, #060a10 60%);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+        font-size: 16px;
+        min-height: 100vh;
+      }
+      .wrap { max-width: 880px; margin: 0 auto; padding: 56px 22px 80px; }
+      header { display: flex; align-items: center; gap: 14px; }
+      .brand .name { font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 16px; color: var(--core); }
+      .brand .sub { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+        font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace; }
+      .hero { text-align: center; padding: 48px 0 8px; }
+      .hero svg { margin-bottom: 8px; }
+      h1 { font-size: clamp(30px, 6vw, 46px); margin: 18px 0 8px; color: var(--core); letter-spacing: -0.01em; line-height: 1.1; }
+      .tagline { color: var(--fg); font-size: 18px; max-width: 620px; margin: 0 auto; }
+      .ccp-pill { display: inline-block; margin-top: 18px; padding: 5px 12px; border: 1px solid var(--border);
+        border-radius: 999px; color: var(--muted); font-size: 12.5px; }
+      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 44px 0; }
+      .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+      .card h3 { margin: 0 0 6px; font-size: 16px; color: var(--cyan); }
+      .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+      .cta { text-align: center; margin: 40px 0 8px; }
+      .cta .soon { display: inline-block; padding: 12px 22px; border: 1px solid var(--cyan); border-radius: 12px;
+        color: var(--cyan); font-weight: 600; }
+      .links { text-align: center; margin-top: 22px; }
+      .links a { color: var(--cyan); text-decoration: none; margin: 0 10px; }
+      .links a:hover { text-decoration: underline; }
+      footer { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <radialGradient id="g" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#00C8FF" stop-opacity=".5" />
+              <stop offset=".55" stop-color="#00C8FF" stop-opacity=".13" />
+              <stop offset="1" stop-color="#00C8FF" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7fe0ff" /><stop offset=".5" stop-color="#00C8FF" />
+              <stop offset="1" stop-color="#00C8FF" stop-opacity=".55" />
+            </linearGradient>
+            <linearGradient id="cell" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#00C8FF" stop-opacity=".5" /><stop offset="1" stop-color="#00C8FF" stop-opacity=".22" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="40" fill="url(#g)" />
+          <polygon points="50,12 88,34.8 88,65.2 50,88 12,65.2 12,34.8" fill="none" stroke="url(#frame)" stroke-width="4.2" stroke-linejoin="round" />
+          <polygon points="50,31 69,42.4 69,57.6 50,69 31,57.6 31,42.4" fill="url(#cell)" stroke="#00C8FF" stroke-width="1.6" stroke-linejoin="round" />
+          <circle cx="50" cy="50" r="5" fill="#EAFBFF" />
+        </svg>
+        <div class="brand">
+          <div class="name">Cyno Bridge</div>
+          <div class="sub">EVE Online companion</div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1>Your capsuleers, at a glance</h1>
+        <p class="tagline">
+          An unofficial companion app for EVE Online — track skills, wallet, clones, assets,
+          location and planetary industry across all your characters, in one place.
+        </p>
+        <span class="ccp-pill">Read-only · no in-game actions · your data stays on your device</span>
+      </section>
+
+      <section class="features">
+        <div class="card"><h3>Skills &amp; queue</h3><p>Skill points, training progress, and the full skill queue with finish times.</p></div>
+        <div class="card"><h3>Wallet</h3><p>Balance, journal, transactions, and your open market orders.</p></div>
+        <div class="card"><h3>Clones &amp; implants</h3><p>Jump clones, their locations, and the implants in each.</p></div>
+        <div class="card"><h3>Assets</h3><p>What you own and where it sits, with reference-price valuation.</p></div>
+        <div class="card"><h3>Location &amp; ship</h3><p>Current system, station/structure, online status, and active ship.</p></div>
+        <div class="card"><h3>Planetary industry</h3><p>Your PI colonies and extractor/factory status at a glance.</p></div>
+      </section>
+
+      <div class="cta">
+        <span class="soon">Coming soon to Google Play</span>
+      </div>
+
+      <div class="links">
+        <a href="https://mr-benedict.github.io/cynobridge-legal/">Privacy Policy</a>
+        <a href="mailto:info@benware.io">Contact</a>
+      </div>
+
+      <footer>
+        Cyno Bridge is an unofficial, fan-made tool. Not affiliated with or endorsed by CCP Games.
+        EVE Online and all related trademarks are the property of CCP hf.
+      </footer>
+    </div>
+  </body>
+</html>
