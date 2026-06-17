@@ -1,254 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index, follow" />
-    <title>Privacy Policy — Cyno Bridge</title>
-    <meta
-      name="description"
-      content="Privacy policy for Cyno Bridge, an unofficial companion app for EVE Online. No servers, no analytics, no tracking — your data stays on your device."
-    />
-    <style>
-      :root {
-        --bg: #060a10;
-        --surface: #0d1520;
-        --border: #16263a;
-        --fg: #c8d8e8;
-        --muted: #5a7a9a;
-        --cyan: #00c8ff;
-        --core: #eafbff;
-      }
-      * { box-sizing: border-box; }
-      html { -webkit-text-size-adjust: 100%; }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-          sans-serif;
-        line-height: 1.65;
-        font-size: 16px;
-      }
-      .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
-      header { display: flex; align-items: center; gap: 14px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
-      header svg { flex: 0 0 auto; }
-      .brand { display: flex; flex-direction: column; gap: 2px; }
-      .brand .name {
-        font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-        font-size: 15px; color: var(--core);
-      }
-      .brand .sub {
-        font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
-        font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-      }
-      h1 { font-size: 28px; margin: 34px 0 4px; color: var(--core); letter-spacing: -0.01em; }
-      .effective { color: var(--muted); font-size: 14px; margin: 0 0 26px; }
-      h2 {
-        font-size: 18px; margin: 38px 0 10px; color: var(--cyan);
-        border-left: 3px solid var(--cyan); padding-left: 12px;
-      }
-      p, li { color: var(--fg); }
-      a { color: var(--cyan); text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      ul { padding-left: 22px; }
-      li { margin: 6px 0; }
-      strong { color: var(--core); font-weight: 600; }
-      .lede {
-        background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-        padding: 16px 18px; margin: 22px 0 8px; color: var(--fg);
-      }
-      .lede strong { color: var(--cyan); }
-      code {
-        background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
-        padding: 1px 6px; font-size: 13px; color: var(--core);
-        font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-      }
-      footer {
-        margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--border);
-        color: var(--muted); font-size: 13px;
-      }
-      footer p { color: var(--muted); margin: 8px 0; }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        <svg width="44" height="44" viewBox="0 0 100 100" aria-hidden="true">
-          <defs>
-            <radialGradient id="gCy" cx="50%" cy="50%" r="50%">
-              <stop offset="0" stop-color="#00C8FF" stop-opacity=".5" />
-              <stop offset=".55" stop-color="#00C8FF" stop-opacity=".13" />
-              <stop offset="1" stop-color="#00C8FF" stop-opacity="0" />
-            </radialGradient>
-            <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#7fe0ff" />
-              <stop offset=".5" stop-color="#00C8FF" />
-              <stop offset="1" stop-color="#00C8FF" stop-opacity=".55" />
-            </linearGradient>
-            <linearGradient id="cell" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#00C8FF" stop-opacity=".5" />
-              <stop offset="1" stop-color="#00C8FF" stop-opacity=".22" />
-            </linearGradient>
-          </defs>
-          <circle cx="50" cy="50" r="40" fill="url(#gCy)" />
-          <polygon points="50,12 88,34.8 88,65.2 50,88 12,65.2 12,34.8" fill="none"
-            stroke="url(#frame)" stroke-width="4.2" stroke-linejoin="round" />
-          <polygon points="50,31 69,42.4 69,57.6 50,69 31,57.6 31,42.4" fill="url(#cell)"
-            stroke="#00C8FF" stroke-width="1.6" stroke-linejoin="round" />
-          <circle cx="50" cy="50" r="5" fill="#EAFBFF" />
-        </svg>
-        <div class="brand">
-          <span class="name">Cyno Bridge</span>
-          <span class="sub">Privacy</span>
-        </div>
-      </header>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<title>Privacy Policy — Cyno Bridge</title>
+<meta name="description" content="Privacy policy for Cyno Bridge, an unofficial companion app for EVE Online. No servers, no analytics, no tracking — your data stays on your device." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --void:#060A10; --surface:#0D1520; --raised:#142030; --fg:#C8D8E8; --mfg:#5A7A9A; --dim:#3A5A7A;
+    --cyan:#00C8FF; --amber:#F0A500; --green:#00E5A0; --red:#FF3355;
+    --display:'Exo 2',sans-serif; --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+    --border:rgba(0,200,255,0.12); --border-strong:rgba(0,200,255,0.26);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--void); color:var(--fg); font-family:var(--body); line-height:1.7; -webkit-font-smoothing:antialiased; overflow-x:hidden; font-size:16px;}
+  a{color:var(--cyan); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  ::selection{background:rgba(0,200,255,0.25); color:#EFF6FB;}
 
-      <h1>Privacy Policy</h1>
-      <p class="effective">Effective date: 16 June 2026</p>
+  .space-bg{position:fixed; inset:0; z-index:-2; background:radial-gradient(120% 90% at 50% -5%, #101c2b 0%, #0a0f17 45%, #06090e 100%);}
+  .space-bg::before{content:""; position:absolute; inset:0; opacity:0.6;
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 18%, rgba(0,200,255,0.45), transparent),
+      radial-gradient(1.5px 1.5px at 72% 9%, rgba(255,255,255,0.35), transparent),
+      radial-gradient(1.5px 1.5px at 38% 62%, rgba(0,200,255,0.3), transparent),
+      radial-gradient(1px 1px at 90% 48%, rgba(255,255,255,0.28), transparent),
+      radial-gradient(1px 1px at 6% 80%, rgba(0,200,255,0.28), transparent);}
 
-      <p>
-        Cyno Bridge ("the app", "we", "us") is an unofficial, fan-made companion app for the game
-        EVE Online. It lets you view your own EVE Online character information — skills, skill
-        queue, wallet, clones, location, assets, market orders, and planetary industry — in one
-        place. This policy explains exactly what data the app handles and how.
-      </p>
+  /* nav */
+  nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(12px); background:rgba(6,10,16,0.72); border-bottom:1px solid var(--border);}
+  .nav-in{max-width:1200px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand .hex{width:34px; height:34px; display:flex; align-items:center; justify-content:center; background:rgba(0,200,255,0.08); border:1px solid var(--border-strong); border-radius:5px;}
+  .brand .nm{font-family:var(--display); font-weight:700; font-size:16px; letter-spacing:0.12em; color:#EFF6FB; text-transform:uppercase;}
+  .nav-back{font-family:var(--mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan); border:1px solid var(--border-strong); border-radius:4px; padding:9px 16px;}
+  .nav-back:hover{text-decoration:none; background:rgba(0,200,255,0.08);}
 
-      <div class="lede">
-        <strong>Short version:</strong> Cyno Bridge has no servers of its own. It communicates only
-        with CCP Games' official EVE Online services, from your device, using a login you authorize.
-        We do not operate a backend, we do not use analytics or advertising, and we never receive,
-        store, or have access to your data.
-      </div>
+  .wrap{max-width:780px; margin:0 auto; padding:0 40px;}
+  @media(max-width:760px){ .wrap{padding:0 22px;} .nav-in{padding:14px 22px;} }
 
-      <h2>1. Who we are</h2>
-      <p>
-        Cyno Bridge is developed and published by an independent developer. For any privacy question
-        or request, contact <a href="mailto:info@benware.io">info@benware.io</a>.
-      </p>
-      <p>
-        Cyno Bridge is not affiliated with, endorsed by, or sponsored by CCP Games. EVE Online and
-        all related trademarks are the property of CCP hf.
-      </p>
+  header.doc{padding:64px 0 8px;}
+  .kicker{font-family:var(--mono); font-size:13px; letter-spacing:0.26em; text-transform:uppercase; color:var(--cyan); display:inline-flex; align-items:center; gap:11px;}
+  .kicker .dot{width:7px; height:7px; border-radius:50%; background:var(--cyan); box-shadow:0 0 9px var(--cyan);}
+  h1{margin:24px 0 6px; font-family:var(--display); font-weight:800; font-size:clamp(36px,6vw,54px); color:#EFF6FB; letter-spacing:-0.01em; line-height:1.05;}
+  .effective{font-family:var(--mono); font-size:13px; letter-spacing:0.08em; color:var(--mfg); margin:0;}
 
-      <h2>2. The data the app accesses</h2>
-      <p>
-        When you log in, you authenticate through CCP's official <strong>EVE Single Sign-On
-        (SSO)</strong> on CCP's own web page. The app never sees or handles your EVE account
-        password. You grant the app permission to <strong>read (never modify)</strong> the following
-        information about the characters you add:
-      </p>
-      <ul>
-        <li><strong>Character identity:</strong> character ID, name, and public portrait image.</li>
-        <li><strong>Skills</strong> and the skill training queue.</li>
-        <li>
-          <strong>Wallet:</strong> balance, journal, and transactions (in-game ISK — a virtual
-          currency with no real-world monetary value).
-        </li>
-        <li><strong>Market orders</strong> (your open buy/sell orders).</li>
-        <li><strong>Clones and implants.</strong></li>
-        <li><strong>Location, online status, and current ship.</strong></li>
-        <li><strong>Assets.</strong></li>
-        <li><strong>Planetary Interaction</strong> (colonies).</li>
-      </ul>
-      <p>
-        All of this is read-only. The app cannot perform any in-game action, make trades, spend ISK,
-        or change anything on your account.
-      </p>
+  .lede{position:relative; background:linear-gradient(150deg,#0d1826,#0a121d); border:1px solid var(--border-strong); border-radius:10px; padding:22px 24px; margin:34px 0 10px; overflow:hidden;}
+  .lede::before{content:""; position:absolute; top:-50px; right:-30px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,rgba(0,229,160,0.1),transparent 70%);}
+  .lede p{margin:0; font-size:16px; color:#B7C9D9; position:relative;}
+  .lede strong{color:var(--cyan); font-weight:600;}
 
-      <h2>3. How the data is handled and stored</h2>
-      <ul>
-        <li>
-          <strong>Authentication tokens.</strong> Logging in produces access and refresh tokens.
-          These are stored only on your device, in the operating system's secure storage (Apple
-          Keychain / Android Keystore). They are not transmitted to us or to any party other than
-          CCP.
-        </li>
-        <li>
-          <strong>Your character data.</strong> Character information is fetched directly from CCP's
-          servers to your device each time you use the app, and held only temporarily in memory to
-          display it. It is not written to any server we control — we have none.
-        </li>
-        <li>
-          <strong>No developer servers.</strong> The app communicates solely between your device and
-          CCP's official endpoints (<code>login.eveonline.com</code>, <code>esi.evetech.net</code>,
-          <code>images.evetech.net</code>).
-        </li>
-        <li>
-          <strong>No analytics or tracking.</strong> The app contains no analytics, advertising,
-          crash-reporting, or tracking software of any kind. We do not profile you and we build no
-          record of your activity.
-        </li>
-      </ul>
+  h2{font-family:var(--display); font-weight:700; font-size:23px; color:#EAF2F8; margin:46px 0 12px; display:flex; align-items:baseline; gap:12px; line-height:1.2;}
+  h2 .n{font-family:var(--mono); font-size:14px; font-weight:500; color:var(--cyan); letter-spacing:0.04em;}
+  p, li{color:#B0C2D2; font-size:16px;}
+  p{margin:0 0 12px;}
+  strong{color:#E8F1F8; font-weight:600;}
+  ul{padding-left:4px; list-style:none; margin:12px 0;}
+  li{margin:10px 0; padding-left:24px; position:relative;}
+  li::before{content:""; position:absolute; left:2px; top:11px; width:6px; height:6px; background:var(--cyan); transform:rotate(45deg); opacity:0.7;}
+  code{font-family:var(--mono); font-size:13.5px; color:var(--cyan); background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:1px 7px;}
 
-      <h2>4. Who your data is shared with</h2>
-      <p>
-        We do not share your data with anyone, because we never receive it. The only network
-        communication the app performs is directly with CCP Games' EVE Online services, to
-        authenticate you and to retrieve your own character data at your request. CCP's handling of
-        your data is governed by <a href="https://www.ccpgames.com/" rel="noopener">CCP Games' own
-        privacy policy</a>. We do not sell data, we do not use it for advertising, and there are no
-        other third-party recipients.
-      </p>
+  footer{border-top:1px solid var(--border); padding:40px 0 60px; margin-top:56px;}
+  .foot-in{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; align-items:center;}
+  .foot-links{display:flex; gap:26px; flex-wrap:wrap;}
+  .foot-links a{font-family:var(--body); font-size:14px; color:var(--mfg);}
+  .foot-links a:hover{color:var(--cyan);}
+  .disclaimer{font-family:var(--body); font-size:13px; line-height:1.6; color:var(--dim); margin-top:26px;}
+  .disclaimer p{color:var(--dim); margin:6px 0; font-size:13px;}
+</style>
+</head>
+<body>
+<div class="space-bg"></div>
 
-      <h2>5. Data retention and deletion</h2>
-      <p>
-        Because we hold none of your data on any server, there is nothing for us to retain or delete
-        on our side. On your device:
-      </p>
-      <ul>
-        <li><strong>Removing a character</strong> from the app deletes that character's stored tokens.</li>
-        <li><strong>Logging out</strong> removes stored tokens.</li>
-        <li><strong>Uninstalling the app</strong> removes all data the app stored on your device.</li>
-      </ul>
-      <p>
-        You can also revoke the app's access at any time from CCP's EVE Online account management /
-        third-party application settings. For any question about this, contact
-        <a href="mailto:info@benware.io">info@benware.io</a>.
-      </p>
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">
+      <span class="hex"><svg width="18" height="18" viewBox="0 0 12 12" fill="none"><polygon points="6,1 11,4 11,8 6,11 1,8 1,4" stroke="#00C8FF" stroke-width="0.9" fill="none"/><polygon points="6,3.5 8.5,5 8.5,7 6,8.5 3.5,7 3.5,5" fill="#00C8FF" fill-opacity="0.4"/></svg></span>
+      <span class="nm">Cyno Bridge</span>
+    </a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
 
-      <h2>6. Security</h2>
-      <p>
-        Tokens are stored in the device's hardware-backed secure storage (Keychain / Keystore). All
-        communication with CCP's servers uses encrypted HTTPS/TLS connections. Authentication uses
-        the OAuth 2.0 PKCE flow, so your password is entered only on CCP's own site and is never
-        exposed to the app.
-      </p>
+<div class="wrap">
+  <header class="doc">
+    <div class="kicker"><span class="dot"></span>Privacy</div>
+    <h1>Privacy Policy</h1>
+    <p class="effective">Effective date: 16 June 2026</p>
+  </header>
 
-      <h2>7. Children</h2>
-      <p>
-        Cyno Bridge is not directed at children. EVE Online is intended for players aged 16 and over
-        per CCP's terms; you should not use this app unless you meet CCP's age requirements for an
-        EVE Online account.
-      </p>
+  <p style="margin-top:26px;">Cyno Bridge ("the app", "we", "us") is an unofficial, fan-made companion app for the game EVE Online. It lets you view your own EVE Online character information — skills, skill queue, wallet, clones, location, assets, market orders, and planetary industry — in one place. This policy explains exactly what data the app handles and how.</p>
 
-      <h2>8. Permissions</h2>
-      <p>
-        The app requires network/internet access to communicate with CCP's servers. It does not
-        request access to your location, camera, microphone, contacts, photos, or files.
-      </p>
+  <div class="lede">
+    <p><strong>Short version:</strong> Cyno Bridge has no servers of its own. It communicates only with CCP Games' official EVE Online services, from your device, using a login you authorize. We do not operate a backend, we do not use analytics or advertising, and we never receive, store, or have access to your data.</p>
+  </div>
 
-      <h2>9. Changes to this policy</h2>
-      <p>
-        We may update this policy from time to time. Material changes will be reflected here with a
-        new effective date. Continued use of the app after an update constitutes acceptance of the
-        revised policy.
-      </p>
+  <h2><span class="n">01</span> Who we are</h2>
+  <p>Cyno Bridge is developed and published by an independent developer. For any privacy question or request, contact <a href="mailto:info@benware.io">info@benware.io</a>.</p>
+  <p>Cyno Bridge is not affiliated with, endorsed by, or sponsored by CCP Games. EVE Online and all related trademarks are the property of CCP hf.</p>
 
-      <h2>10. Contact</h2>
-      <p>
-        Questions or requests about this policy or your data:
-        <a href="mailto:info@benware.io">info@benware.io</a>.
-      </p>
+  <h2><span class="n">02</span> The data the app accesses</h2>
+  <p>When you log in, you authenticate through CCP's official <strong>EVE Single Sign-On (SSO)</strong> on CCP's own web page. The app never sees or handles your EVE account password. You grant the app permission to <strong>read (never modify)</strong> the following information about the characters you add:</p>
+  <ul>
+    <li><strong>Character identity:</strong> character ID, name, and public portrait image.</li>
+    <li><strong>Skills</strong> and the skill training queue.</li>
+    <li><strong>Wallet:</strong> balance, journal, and transactions (in-game ISK — a virtual currency with no real-world monetary value).</li>
+    <li><strong>Market orders</strong> (your open buy/sell orders).</li>
+    <li><strong>Clones and implants.</strong></li>
+    <li><strong>Location, online status, and current ship.</strong></li>
+    <li><strong>Assets.</strong></li>
+    <li><strong>Planetary Interaction</strong> (colonies).</li>
+  </ul>
+  <p>All of this is read-only. The app cannot perform any in-game action, make trades, spend ISK, or change anything on your account.</p>
 
-      <footer>
-        <p>Cyno Bridge — an unofficial companion app for EVE Online.</p>
-        <p>
-          Not affiliated with or endorsed by CCP Games. EVE Online and all related trademarks are
-          the property of CCP hf.
-        </p>
-        <p>Last updated: 16 June 2026.</p>
-      </footer>
+  <h2><span class="n">03</span> How the data is handled and stored</h2>
+  <ul>
+    <li><strong>Authentication tokens.</strong> Logging in produces access and refresh tokens. These are stored only on your device, in the operating system's secure storage (Apple Keychain / Android Keystore). They are not transmitted to us or to any party other than CCP.</li>
+    <li><strong>Your character data.</strong> Character information is fetched directly from CCP's servers to your device each time you use the app, and held only temporarily in memory to display it. It is not written to any server we control — we have none.</li>
+    <li><strong>No developer servers.</strong> The app communicates solely between your device and CCP's official endpoints (<code>login.eveonline.com</code>, <code>esi.evetech.net</code>, <code>images.evetech.net</code>).</li>
+    <li><strong>No analytics or tracking.</strong> The app contains no analytics, advertising, crash-reporting, or tracking software of any kind. We do not profile you and we build no record of your activity.</li>
+  </ul>
+
+  <h2><span class="n">04</span> Who your data is shared with</h2>
+  <p>We do not share your data with anyone, because we never receive it. The only network communication the app performs is directly with CCP Games' EVE Online services, to authenticate you and to retrieve your own character data at your request. CCP's handling of your data is governed by <a href="https://www.ccpgames.com/" rel="noopener">CCP Games' own privacy policy</a>. We do not sell data, we do not use it for advertising, and there are no other third-party recipients.</p>
+
+  <h2><span class="n">05</span> Data retention and deletion</h2>
+  <p>Because we hold none of your data on any server, there is nothing for us to retain or delete on our side. On your device:</p>
+  <ul>
+    <li><strong>Removing a character</strong> from the app deletes that character's stored tokens.</li>
+    <li><strong>Logging out</strong> removes stored tokens.</li>
+    <li><strong>Uninstalling the app</strong> removes all data the app stored on your device.</li>
+  </ul>
+  <p>You can also revoke the app's access at any time from CCP's EVE Online account management / third-party application settings. For any question about this, contact <a href="mailto:info@benware.io">info@benware.io</a>.</p>
+
+  <h2><span class="n">06</span> Security</h2>
+  <p>Tokens are stored in the device's hardware-backed secure storage (Keychain / Keystore). All communication with CCP's servers uses encrypted HTTPS/TLS connections. Authentication uses the OAuth 2.0 PKCE flow, so your password is entered only on CCP's own site and is never exposed to the app.</p>
+
+  <h2><span class="n">07</span> Children</h2>
+  <p>Cyno Bridge is not directed at children. EVE Online is intended for players aged 16 and over per CCP's terms; you should not use this app unless you meet CCP's age requirements for an EVE Online account.</p>
+
+  <h2><span class="n">08</span> Permissions</h2>
+  <p>The app requires network/internet access to communicate with CCP's servers. It does not request access to your location, camera, microphone, contacts, photos, or files.</p>
+
+  <h2><span class="n">09</span> Changes to this policy</h2>
+  <p>We may update this policy from time to time. Material changes will be reflected here with a new effective date. Continued use of the app after an update constitutes acceptance of the revised policy.</p>
+
+  <h2><span class="n">10</span> Contact</h2>
+  <p>Questions or requests about this policy or your data: <a href="mailto:info@benware.io">info@benware.io</a>.</p>
+</div>
+
+<footer class="wrap">
+  <div class="foot-in">
+    <a class="brand" href="index.html">
+      <span class="hex"><svg width="18" height="18" viewBox="0 0 12 12" fill="none"><polygon points="6,1 11,4 11,8 6,11 1,8 1,4" stroke="#00C8FF" stroke-width="0.9" fill="none"/><polygon points="6,3.5 8.5,5 8.5,7 6,8.5 3.5,7 3.5,5" fill="#00C8FF" fill-opacity="0.4"/></svg></span>
+      <span class="nm">Cyno Bridge</span>
+    </a>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="mailto:info@benware.io">Contact</a>
     </div>
-  </body>
+  </div>
+  <div class="disclaimer">
+    <p>Cyno Bridge — an unofficial companion app for EVE Online.</p>
+    <p>Not affiliated with or endorsed by CCP Games. EVE Online and all related trademarks are the property of CCP hf.</p>
+    <p>Last updated: 16 June 2026.</p>
+  </div>
+</footer>
+</body>
 </html>
