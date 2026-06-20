@@ -138,6 +138,32 @@
   .section-head h2{font-size:clamp(30px,4.4vw,46px); font-weight:700; margin-top:16px; line-height:1.08;}
   .section-head .lead{margin-top:16px;}
 
+  /* ---- section divider header ---- */
+  .divider{display:flex; flex-direction:column; align-items:center; text-align:center; padding:78px 0 8px;}
+  .divider h2{font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.04; letter-spacing:-0.01em; margin-top:22px;}
+  .divider .lead{margin-top:18px; max-width:600px; font-size:19px;}
+  .pill-new{font-family:var(--mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--green); border:1px solid rgba(0,229,160,0.4); border-radius:99px; padding:6px 14px; display:inline-flex; align-items:center; gap:9px;}
+  .pill-new .d{width:6px; height:6px; border-radius:50%; background:var(--green); box-shadow:0 0 8px var(--green);}
+
+  /* ---- iframe phone (isolated new screens) ---- */
+  .feat-iframe{border:0; background:transparent; display:block; width:236px; height:486px; filter:drop-shadow(0 30px 60px rgba(0,0,0,0.55));}
+
+  /* ---- roadmap ---- */
+  .road-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:46px;}
+  .road-card{position:relative; background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:22px 22px 24px; display:flex; flex-direction:column; gap:0; transition:border-color .2s, transform .2s;}
+  .road-card:hover{border-color:var(--border-strong); transform:translateY(-2px);}
+  .road-top{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px;}
+  .road-ic{width:38px; height:38px; border-radius:5px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .road-status{font-family:var(--mono); font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; padding:4px 9px; border-radius:99px; white-space:nowrap;}
+  .st-planned{color:var(--cyan); border:1px solid var(--border-strong); background:rgba(0,200,255,0.06);}
+  .st-idea{color:var(--mfg); border:1px solid var(--border);}
+  .road-card h3{font-family:var(--display); font-size:19px; font-weight:600; color:#E8F1F8; margin:0 0 7px;}
+  .road-card p{font-family:var(--body); font-size:14.5px; line-height:1.5; color:#8CA1B3; margin:0;}
+  .road-note{font-family:var(--body); font-size:14.5px; line-height:1.6; color:var(--mfg); max-width:660px; margin:30px auto 0; text-align:center;}
+  .road-note b{color:#C8D8E8; font-weight:600;}
+  @media(max-width:900px){ .road-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:600px){ .road-grid{grid-template-columns:1fr;} }
+
   /* Content is visible by default; entrance is a transform-only enhancement that can never hide content. */
   .reveal{opacity:1; transform:none;}
   @media(prefers-reduced-motion:no-preference){
@@ -160,8 +186,9 @@
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
+      <a href="#new">What's new</a>
+      <a href="#roadmap">Roadmap</a>
       <a href="#privacy">Privacy</a>
-      <a href="#faq">FAQ</a>
       <a class="nav-cta" href="#get">Get the app</a>
     </div>
   </div>
@@ -266,6 +293,115 @@
       </div>
     </div>
     <div class="feat-phone"><div class="phone-mount" data-screen="roster" data-scale="0.6"></div></div>
+  </section>
+
+  <div class="divider reveal" id="new">
+    <span class="pill-new"><span class="d"></span>Newly Shipped</span>
+    <h2>More of New Eden,<br/>now on the bridge.</h2>
+    <p class="lead">The latest build pulls three more live ESI sources into Cyno Bridge — a unified activity timeline, your in-game comms, and a full combat log.</p>
+  </div>
+
+  <section class="feat reveal">
+    <div class="feat-text">
+      <div class="eyebrow">Activity</div>
+      <h2>One timeline for<br/>everything that happened.</h2>
+      <p class="lead">Wallet, industry, contracts, combat and notifications — five real ESI sources merged into a single feed, newest first.</p>
+      <div class="callouts">
+        <div class="callout"><div class="num">01</div><div><div class="ct">Five sources, one feed</div><div class="cd">Bounties, finished jobs, accepted contracts, kills and EVE notifications — merged by timestamp into a single honest stream.</div></div></div>
+        <div class="callout"><div class="num">02</div><div><div class="ct">Search &amp; filter, instantly</div><div class="cd">Free-text search and source chips narrow the feed client-side — no refetch, no waiting. Every row taps through to its detail.</div></div></div>
+        <div class="callout"><div class="num">03</div><div><div class="ct">Honest by source</div><div class="cd">Every row is a real event with a real time; a missing scope simply drops that source and offers a re-login, never a broken feed.</div></div></div>
+      </div>
+    </div>
+    <div class="feat-phone"><iframe class="feat-iframe" src="libnew/screen.html?screen=activity&amp;scale=0.62" title="Activity screen" scrolling="no"></iframe></div>
+  </section>
+
+  <section class="feat reveal">
+    <div class="feat-text">
+      <div class="eyebrow">Comms</div>
+      <h2>Everything<br/><span class="cyan">worth reading.</span></h2>
+      <p class="lead">EVE notifications and mail in one read-only inbox — parsed, searchable, and tucked behind the top-bar bell.</p>
+      <div class="callouts">
+        <div class="callout"><div class="num">01</div><div><div class="ct">Notifications, decoded</div><div class="cd">Structure attacks, war decs, skill completions and more — parsed into a plain-language line, with the raw detail a tap away.</div></div></div>
+        <div class="callout"><div class="num">02</div><div><div class="ct">Mail, read-only</div><div class="cd">Your EVEMail inbox with senders and labels resolved. Cyno Bridge never sends, replies, or marks mail in-game.</div></div></div>
+        <div class="callout"><div class="num">03</div><div><div class="ct">Unread at a glance</div><div class="cd">A single bell with an unread badge is the universal home for messages — it never competes with your status tabs.</div></div></div>
+      </div>
+    </div>
+    <div class="feat-phone"><iframe class="feat-iframe" src="libnew/screen.html?screen=comms&amp;scale=0.62" title="Comms screen" scrolling="no"></iframe></div>
+  </section>
+
+  <section class="feat reveal">
+    <div class="feat-text">
+      <div class="eyebrow">Killmails</div>
+      <h2>Every kill,<br/><span style="color:var(--red);">every loss.</span></h2>
+      <p class="lead">A read-only combat log — who was involved, what dropped, and an honest estimated ISK value on every mail.</p>
+      <div class="callouts">
+        <div class="callout"><div class="num">01</div><div><div class="ct">Kills, losses, efficiency</div><div class="cd">A summary header tallies destroyed vs lost and your ISK efficiency, with estimated values flagged "est."</div></div></div>
+        <div class="callout"><div class="num">02</div><div><div class="ct">The whole engagement</div><div class="cd">Each row carries the ship, system and security, who got the final blow, and how many pilots were involved.</div></div></div>
+        <div class="callout"><div class="num">03</div><div><div class="ct">Filter kills from losses</div><div class="cd">Day-grouped and filterable in a tap — value is a market-price estimate, never invented, always labelled.</div></div></div>
+      </div>
+    </div>
+    <div class="feat-phone"><iframe class="feat-iframe" src="libnew/screen.html?screen=killmails&amp;scale=0.62" title="Killmails screen" scrolling="no"></iframe></div>
+  </section>
+
+  <section class="reveal" id="roadmap" style="padding:30px 0 20px;">
+    <div class="section-head">
+      <div class="kicker"><span class="dot"></span>On the Roadmap</div>
+      <h2>What's coming next.</h2>
+      <p class="lead">Cyno Bridge is in active development. These features are planned and designed — each stays read-only, and each adds at most one ESI scope that degrades gracefully if you haven't granted it.</p>
+    </div>
+    <div class="road-grid">
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,229,160,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 8-8M21 8v5M21 8h-5" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Net worth &amp; wealth trend</h3>
+        <p>Your account-wide net worth with a real history line as on-device snapshots accrue over time.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,200,255,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 3a6 6 0 0 1 6 6c0 4-6 9-6 9s-6-5-6-9a6 6 0 0 1 6-6Z" stroke="#00C8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Training tracker + remap advisor</h3>
+        <p>SP-over-time trend plus a neural-remap suggestion, surfaced right in the Skills tab.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,200,255,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#00C8FF" stroke-width="2"/><path d="M6 21v-1a6 6 0 0 1 12 0v1" stroke="#00C8FF" stroke-width="2" stroke-linecap="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Clones, implants &amp; jump readiness</h3>
+        <p>Jump clones, active implants and fatigue — answering one question: are you ready to jump?</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,200,255,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 21V9l6-3 6 3v12M9 21V13h6v8M21 21V11l-6-2" stroke="#00C8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Industry jobs</h3>
+        <p>Running manufacturing, research and reaction jobs with live progress, plus an Activity feed.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,229,160,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7zM14 3v5h5" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Contracts</h3>
+        <p>Outstanding courier and item-exchange contracts you can act on, browsable and in the timeline.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(240,165,0,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M14 3l7 7-4 1-4-4 1-4ZM11 6 4 13l7 7 7-7" stroke="#F0A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Mining ledger</h3>
+        <p>Volume and estimated value mined over the last 30 days, broken down by ore and system.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,200,255,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#00C8FF" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="#00C8FF" stroke-width="2"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Blueprint library</h3>
+        <p>Your BPOs and BPCs with ME/TE and run counts, reachable from the Assets tab.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,229,160,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M5 7l7-5 7 5M5 7v10l7 5 7-5V7" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Passive income</h3>
+        <p>R&amp;D agent research points and loyalty-point balances — the income that ticks while you're docked.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(0,200,255,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 21V8l6-4 6 4M15 21V11l6-3v13M3 12h6M3 16h6" stroke="#00C8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="road-status st-planned">Planned</span></div>
+        <h3>Corporation layer</h3>
+        <p>Role-gated structure fuel and state, plus member tracking for directors — gated on your in-game roles.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-top"><span class="road-ic" style="background:rgba(240,165,0,0.12);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#F0A500" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" stroke="#F0A500" stroke-width="2"/></svg></span><span class="road-status st-idea">Idea</span></div>
+        <h3>Context tiles</h3>
+        <p>Live incursions, factional-warfare standings and server status — public data, no login required.</p>
+      </div>
+    </div>
+    <p class="road-note"><b>Read-only, always.</b> Like everything in Cyno Bridge, every planned feature only ever views your data — it can never act in-game on your behalf.</p>
   </section>
 
   <section class="band reveal" id="privacy">
